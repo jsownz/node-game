@@ -1,0 +1,18 @@
+{
+  "name": "node-game",
+  "version": "0.0.1",
+  "description": "Node Game test",
+  "main": "game.js",
+  "private": true,
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Jason Sohl",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^3.4.8",
+    "hbs": "*",
+    "socket.io": "*",
+    "mongodb": "*"
+  }
+}

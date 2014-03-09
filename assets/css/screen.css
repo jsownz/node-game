@@ -1,0 +1,102 @@
+html, body {
+  margin: 0;
+  height: 100%;
+  width: 100%;
+  font-family: verdana; }
+
+#game {
+  margin: 10px auto; }
+  #game td {
+    background: #DDD;
+    cursor: pointer; }
+    #game td.selected, #game td.played {
+      cursor: default; }
+  #game.red td:hover {
+    background: #d684b9; }
+  #game.red td.selected {
+    background: #91306f; }
+  #game.red td.played {
+    background: #3566a1; }
+  #game.blue td:hover {
+    background: #93b4dc; }
+  #game.blue td.selected {
+    background: #3566a1; }
+  #game.blue td.played {
+    background: #91306f; }
+
+.your-turn, .waiting, .first, .winner, .loser {
+  opacity: 0;
+  display: none;
+  position: absolute;
+  top: 174px;
+  width: 300px;
+  left: 50%;
+  margin-left: -155px;
+  background: rgba(0, 0, 0, 0.6);
+  color: #FFF;
+  padding: 0px 5px;
+  -moz-border-radius: 4px;
+  -webkit-border-radius: 4px;
+  border-radius: 4px;
+  -moz-transform: scale(0.01);
+  -webkit-transform: scale(0.01);
+  -o-transform: scale(0.01);
+  -ms-transform: scale(0.01);
+  transform: scale(0.01);
+  -webkit-transition: all 400ms ease-in-out;
+  -moz-transition: all 400ms ease-in-out;
+  -ms-transition: all 400ms ease-in-out;
+  -o-transition: all 400ms ease-in-out;
+  transition: all 400ms ease-in-out; }
+  .your-turn.show, .waiting.show, .first.show, .winner.show, .loser.show {
+    display: block; }
+  .your-turn.animated, .waiting.animated, .first.animated, .winner.animated, .loser.animated {
+    opacity: 1;
+    -moz-transform: scale(1);
+    -webkit-transform: scale(1);
+    -o-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1); }
+  .your-turn h3, .waiting h3, .first h3, .winner h3, .loser h3 {
+    text-align: center;
+    font-size: 32px; }
+
+h2.team {
+  text-align: center; }
+
+@media only screen and (min-width: 1px) {
+  #game {
+    width: 300px; }
+    #game td {
+      width: 100px;
+      height: 100px; } }
+@media only screen and (min-width: 360px) {
+  #game {
+    width: 340px; }
+    #game td {
+      width: 113.33333px;
+      height: 113.33333px; } }
+@media only screen and (min-width: 480px) {
+  #game {
+    width: 460px; }
+    #game td {
+      width: 153.33333px;
+      height: 153.33333px; } }
+@media only screen and (min-width: 598px) {
+  #game {
+    width: 575px; }
+    #game td {
+      width: 191.66667px;
+      height: 191.66667px; } }
+@media only screen and (min-width: 640px) {
+  #game {
+    width: 620px; }
+    #game td {
+      width: 206.66667px;
+      height: 206.66667px; } }
+@media only screen and (min-width: 768px) {
+  #game {
+    width: 720px; }
+    #game td {
+      width: 240px;
+      height: 240px; } }

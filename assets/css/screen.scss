@@ -1,0 +1,114 @@
+@mixin gameSize($gWidth) {
+  #game {
+    width: $gWidth;
+    td {
+      width: $gWidth/3;
+      height: $gWidth/3;
+    }
+  }
+}
+
+@mixin animate($time) {
+  -webkit-transition: all $time ease-in-out;
+  -moz-transition: all $time ease-in-out;
+  -ms-transition: all $time ease-in-out;
+  -o-transition: all $time ease-in-out;
+  transition: all $time ease-in-out;
+}
+
+@mixin scaleTo($scale) {
+  -moz-transform: scale($scale);
+  -webkit-transform: scale($scale);
+  -o-transform: scale($scale);
+  -ms-transform: scale($scale);
+  transform: scale($scale);
+}
+
+@mixin border-radius($radius) {
+  -moz-border-radius: $radius;
+  -webkit-border-radius: $radius;
+  border-radius: $radius;
+}
+
+$blue: rgb(53,102,161);
+$red: rgb(145,48,111);
+
+html, body {
+  margin: 0;
+  height: 100%;
+  width: 100%;
+  font-family: verdana;
+}
+
+#game {
+  margin: 10px auto;
+  td {
+    background: #DDD;
+    cursor: pointer;
+    &.selected, &.played {
+      cursor: default;
+    }
+  }
+  &.red {
+    td {
+      &:hover { background: lighten($red,30%); }
+      &.selected { background: $red; }
+      &.played { background: $blue; }
+    }
+  }
+  &.blue {
+    td {
+      &:hover { background: lighten($blue,30%); }
+      &.selected { background: $blue; }
+      &.played { background: $red; }
+    }
+  }
+}
+
+.your-turn, .waiting, .first, .winner, .loser {
+  opacity: 0;
+  display: none;
+  position: absolute;
+  top: 174px;
+  width: 300px;
+  left: 50%;
+  margin-left: -155px;
+  background: rgba(0,0,0,.6);
+  color: #FFF;
+  padding: 0px 5px; 
+  @include border-radius(4px);
+  @include scaleTo(0.01);
+  @include animate(400ms);
+  &.show { display: block; }
+  &.animated {
+    opacity: 1;
+    @include scaleTo(1);
+  }
+  h3 {
+    text-align: center;
+    font-size: 32px;
+  }
+}
+
+h2.team {
+  text-align: center;
+}
+
+@media only screen and (min-width: 1px) {
+  @include gameSize(300px);
+}
+@media only screen and (min-width: 360px) {
+  @include gameSize(340px);
+}
+@media only screen and (min-width: 480px) {
+  @include gameSize(460px);
+}
+@media only screen and (min-width: 598px) {
+  @include gameSize(575px);
+}
+@media only screen and (min-width: 640px) {
+  @include gameSize(620px);
+}
+@media only screen and (min-width: 768px) {
+  @include gameSize(720px);
+}
