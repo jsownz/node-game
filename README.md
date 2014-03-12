@@ -12,7 +12,7 @@ Still need to handle a lot of things:
 + handle cat's game
 + work on remembering where the player was if they disconnect and come back
 + I have mongodb in here just in case I wanna use it
-+ probably going to try mocha for tests
++ probably going to try mocha for tests -- not good at tests though (something to learn)
 + I'm sure there's a ton more..
 
 Definitely need to learn more about sockets
