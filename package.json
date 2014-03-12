@@ -5,6 +5,7 @@
   "main": "game.js",
   "private": true,
   "scripts": {
+    "start": "node game.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Jason Sohl",
